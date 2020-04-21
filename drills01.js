@@ -19,11 +19,23 @@ function objectUpdater(obj) {
     return obj;
 }
 
-
+function personMaker() {
+    var person = {
+      firstName: 'Paul',
+      lastName: 'Jones',
+      // replace `null` with a function that uses self reference to return
+      // full name
+      fullName: function(){
+          return this.firstName + ' ' + this.lastName;
+      },
+    };
+    return person;
+  }
 
 
 
 ////////////////////////Tests////////////////////////////////
 
 // console.log(createMyObject());
-console.log(objectUpdater(createMyObject()));
+//console.log(objectUpdater(createMyObject()));
+console.log(personMaker().fullName());
