@@ -19,6 +19,12 @@ function objectUpdater(obj) {
     return obj;
 }
 
+function keyDeleter(obj) {
+    delete obj.foo;
+    delete obj.bar;
+    return obj;
+}
+
 
 
 
@@ -26,4 +32,5 @@ function objectUpdater(obj) {
 ////////////////////////Tests////////////////////////////////
 
 // console.log(createMyObject());
-console.log(objectUpdater(createMyObject()));
+const updatedObj = objectUpdater(createMyObject());
+console.log(keyDeleter(updatedObj));
