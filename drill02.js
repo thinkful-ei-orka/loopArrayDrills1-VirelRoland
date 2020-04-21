@@ -15,3 +15,19 @@ function makeStudentsReport(data) {
   ];
 
 console.log(makeStudentsReport(testData));
+
+
+function enrollInSummerSchool(students) {
+  for (let i = 0; i < students.length; i++) {
+    students[i].status = "Enrolled in Summer School";
+  //array of objects
+}
+return students;
+}
+
+const studentData = [ { name: 'Tim', status: 'Current student', course: 'Biology', },
+{ name: 'Sue', status: 'Withdrawn', course: 'Mathematics', },
+{ name: 'Liz', status: 'On leave', course: 'Computer science', }, ];
+
+console.log(enrollInSummerSchool(studentData));
+
