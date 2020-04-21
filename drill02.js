@@ -29,5 +29,15 @@ const studentData = [ { name: 'Tim', status: 'Current student', course: 'Biology
 { name: 'Sue', status: 'Withdrawn', course: 'Mathematics', },
 { name: 'Liz', status: 'On leave', course: 'Computer science', }, ];
 
-console.log(enrollInSummerSchool(studentData));
+function findById(items,idNum){
+    return  items.find(function(x){
+        if(x.id===idNum){
+            return x;
+        }
+    })
+}
 
+const data = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
+//console.log(enrollInSummerSchool(studentData));
+
+console.log(findById(data, 2));
